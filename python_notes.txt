@@ -95,17 +95,42 @@ print even_squares  # Prints "[0, 4, 16]"
 
 
 #-------------- Dictionary --------------#
-
-....
-
-
 http://cs231n.github.io/python-numpy-tutorial/
+#-------------- Set --------------#
+#-------------- Tuple --------------#
+
+
+#-------------- Function --------------#
+# Can have optional keyword arguments, like this:
+
+def hello(name, loud=False):
+    if loud:
+        print 'HELLO, %s!' % name.upper()
+    else:
+        print 'Hello, %s' % name
+
+hello('Bob') # Prints "Hello, Bob"
+hello('Fred', loud=True)  # Prints "HELLO, FRED!"
 
 
 
-
-
-
+#-------------- Class --------------#
+class Greeter(object):		# inherited from object class
+    
+    # Constructor
+    def __init__(self, name):
+        self.name = name  # Create an instance variable
+        
+    # Instance method
+    def greet(self, loud=False):
+        if loud:
+            print 'HELLO, %s!' % self.name.upper()
+        else:
+            print 'Hello, %s' % self.name
+        
+g = Greeter('Fred')  # Construct an instance of the Greeter class
+g.greet()            # Call an instance method; prints "Hello, Fred"
+g.greet(loud=True)   # Call an instance method; prints "HELLO, FRED!"
 
 
 
