@@ -1,0 +1,21 @@
+
+############################################################################
+###----------------------------------------------------------------------###
+###----------------------------- Module 1.2 -----------------------------###
+###----------------------------------------------------------------------###
+############################################################################
+
+
+### More powerful approach
+score function	: maps the raw data to class scores, 
+loss function 	: quantifies the agreement between the predicted scores and the ground truth labels.
+The loss function quanti􀂠es our unhappiness with predictions on the training set
+
+
+### Bias trick
+Combine W and b into one single matrix
+
+
+### Normalization of input features
+In Machine Learning, always perform normalization of your input features 
+(in the case of images, every pixel is a feature)
