@@ -1,6 +1,19 @@
 #Python 2.7
 
-# quicksort
+
+
+
+#-------------- Try/Except --------------#
+# check if indexing is continuous
+for i in range (0,395):
+	try:
+		f = open(`i`+'.jpg','r')
+	except IOError as e:
+		print "I/O error({0}): {1}".format(e.errno, e.strerror)
+		print "cannot open", i
+
+
+#-------------- Quicksort --------------#
 def quicksort(arr):
     if len(arr) <= 1:
         return arr
@@ -11,6 +24,7 @@ def quicksort(arr):
     return quicksort(left) + middle + quicksort(right)
     
 print quicksort([3,6,8,10,1,2,1])
+
 
 #-------------- Numbers --------------#
 x = 3
@@ -45,6 +59,11 @@ hw12 = '%s %s %d' % (hello, world, 12)  	# sprintf style string formatting
 
 print hello.replace('l', '(ell)') 			# prints "he(ell)(ell)o"
 print '  world '.strip()  					# Strip leading and trailing whitespace; prints "world"
+
+# concave int to str
+i = 1;
+str = ‘string_’ + `i`
+
 
 # for more https://docs.python.org/2/library/stdtypes.html#string-methods
 
